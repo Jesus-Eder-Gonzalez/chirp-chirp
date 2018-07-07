@@ -16,7 +16,20 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-  // FIX ME
+  let length = sample_text.length-1;
+
+  console.log(counter[sample_text[length]]);
+  if(counter[sample_text[length].toLowerCase()] !== undefined){
+
+    counter[sample_text[length].toLowerCase()]++;
+  }
+  if( length === 0) {
+    return counter;
+  } else {
+
+
+    countLetters(counter,sample_text.substring(0,length));
+  }
 }
 
 $(document).ready(function(){
