@@ -1,12 +1,12 @@
-function chirp(n){
-  if(n === 0){
+function chirp(n) {
+  if (n === 0) {
     return '';
   } else {
-    return 'chirp ' + chirp(n-1);
+    return 'chirp ' + chirp(n - 1);
   }
 
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   $("#result").html(chirp(3));
 });

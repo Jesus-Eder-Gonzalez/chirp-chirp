@@ -6,33 +6,32 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 var counter = {
-  "a" : 0,  "b" : 0,  "c" : 0,  "d" : 0,
-  "e" : 0,  "f" : 0,  "g" : 0,  "h" : 0,
-  "i" : 0,  "j" : 0,  "k" : 0,  "l" : 0,
-  "m" : 0,  "n" : 0,  "o" : 0,  "p" : 0,
-  "q" : 0,  "r" : 0,  "s" : 0,  "t" : 0,
-  "u" : 0,  "v" : 0,  "w" : 0,  "x" : 0,
-  "y" : 0,  "z" : 0
+  "a": 0, "b": 0, "c": 0, "d": 0,
+  "e": 0, "f": 0, "g": 0, "h": 0,
+  "i": 0, "j": 0, "k": 0, "l": 0,
+  "m": 0, "n": 0, "o": 0, "p": 0,
+  "q": 0, "r": 0, "s": 0, "t": 0,
+  "u": 0, "v": 0, "w": 0, "x": 0,
+  "y": 0, "z": 0
 }
 
-function countLetters(counter, sample_text){
-  let length = sample_text.length-1;
+function countLetters(counter, sample_text) {
+  let length = sample_text.length - 1;
 
-  console.log(counter[sample_text[length]]);
-  if(counter[sample_text[length].toLowerCase()] !== undefined){
+  if (counter[sample_text[length].toLowerCase()] !== undefined) {
 
     counter[sample_text[length].toLowerCase()]++;
   }
-  if( length === 0) {
+  if (length === 0) {
     return counter;
   } else {
 
 
-    countLetters(counter,sample_text.substring(0,length));
+    countLetters(counter, sample_text.substring(0, length));
   }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   countLetters(counter, sample_text);
   $("#result").html(JSON.stringify(counter));
 });
