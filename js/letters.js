@@ -19,14 +19,12 @@ function countLetters(counter, sample_text) {
   let length = sample_text.length - 1;
 
   if (counter[sample_text[length].toLowerCase()] !== undefined) {
-
     counter[sample_text[length].toLowerCase()]++;
   }
+  
   if (length === 0) {
     return counter;
   } else {
-
-
     countLetters(counter, sample_text.substring(0, length));
   }
 }
