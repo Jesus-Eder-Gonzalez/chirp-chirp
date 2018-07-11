@@ -4,7 +4,6 @@ function chirp(n) {
   } else {
     return 'chirp ' + chirp(n - 1);
   }
-
 }
 
 $(document).ready(function () {
